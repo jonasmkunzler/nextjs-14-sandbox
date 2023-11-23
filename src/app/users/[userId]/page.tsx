@@ -30,12 +30,12 @@ export default async function UserPage({ params: { userId } }: Params) {
   if(!user.name) return notFound()
 
     return (
-        <>
+        <div className="h-screen">
             <h2>{user.name}</h2>
             <br />
             <Suspense fallback={<h2>Loading...</h2>}>
               <UserPosts userId={user.id.toString()} />
             </Suspense>
-        </>
+        </div>
   )
 }

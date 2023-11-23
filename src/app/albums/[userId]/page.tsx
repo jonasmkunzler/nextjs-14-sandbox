@@ -33,7 +33,7 @@ export default async function AlbumPage({ params: { userId } }: Params) {
   if(!user.name) return notFound()
   
     return (
-        <>
+        <div className="h-screen">
             <h2>SSG</h2>
             <br/>
             <h2>{user.name}</h2>
@@ -41,7 +41,7 @@ export default async function AlbumPage({ params: { userId } }: Params) {
             <Suspense fallback={<h2>Loading...</h2>}>
               <UserAlbums userId={user.id.toString()} />
             </Suspense>
-        </>
+        </div>
   )
 }
 

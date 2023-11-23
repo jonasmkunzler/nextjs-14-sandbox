@@ -15,7 +15,7 @@ export default async function Users() {
   if(!userData) return notFound()
 
   return (
-    <section>
+    <section className="h-screen">
         <Link href='/'>
           <h2>Home</h2>
         </Link>

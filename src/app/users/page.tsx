@@ -12,14 +12,14 @@ export default async function Users() {
   const users = await userData
   
   return (
-    <section>
+    <section className="h-screen">
         <Link href='/'>
           <h2>Home</h2>
         </Link>
       <br />
       {users.map((user) => {
         return (
-        <div key={user.id}>
+        <div key={user.id} >
             <p>
                 <Link href={`/users/${user.id}`}>{user.name}</Link>
             </p>

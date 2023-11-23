@@ -15,30 +15,31 @@ export default async function page() {
       <div className="h-full w-full mx-auto max-w-screen-xl ">
         <div className="flex flex-row p-2  h-full">
           <div className="text-2xl p-4 m-2 border-2 border-stone-700 text-white w-full rounded-xl text-left bg-stone-800 shadow-4xl">
-            <p>SSR Parallel:</p>
+            <h2>SSR Parallel:</h2>
             {eachStock.map((nameStock, index) => (
               <p key={index}>
                 <Link href={`/stocks/${nameStock.sigla}`}>{nameStock.name}</Link>
               </p>
             ))}
             <br />
-            <p>SSR Sequential:</p>
+            <h2>SSR Sequential:</h2>
             <Link href="/users">
               <p>User Page</p>
             </Link>
             <br />
-            <p>ALBUMS SSG:</p>
+            <h2>ALBUMS SSG:</h2>
             <Link href="/albums">
               <p>Albums Page</p>
             </Link>
             <br />
-            <p>TO-DO LIST ISR:</p>
+            <h2>TO-DO LIST ISR:</h2>
             <Link href="/todos">
               <p>Todos Page</p>
             </Link>
             <br />
-            <p>PHOTOS USE CLIENT:</p>
+            <h2>PHOTOS USE CLIENT:</h2>
             <Link href="/photos">
+              <p>(com useReducer)</p>
               <p>Photos</p>
             </Link>
           </div>

@@ -31,11 +31,11 @@ export default function PhotosPage() {
   return (
     <div className="h-screen">
       
-      <h2>
+      <h2 className="text-xl font-bold tracking-wide m-4">
         Photos Counter {state}
       </h2>
-      <button onClick={() => dispatch({ type: REDUCER_ACTION_TYPE.INCREMENT })}>Increment</button>
-      <button onClick={() => dispatch({ type: REDUCER_ACTION_TYPE.DECREMENT })}>Decrement</button>
+      <button className='m-2 p-2 border-gray-800 border-2 rounded-lg bg-gray-900 text-white font-bold text-2xl' onClick={() => dispatch({ type: REDUCER_ACTION_TYPE.INCREMENT })}>+</button>
+      <button className='m-2 p-2 border-gray-800 border-2 rounded-lg bg-gray-900 text-white font-bold text-2xl' onClick={() => dispatch({ type: REDUCER_ACTION_TYPE.DECREMENT })}>-</button>
     </div>
   )
 }
